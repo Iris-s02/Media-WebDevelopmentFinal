@@ -1,57 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <div class = "header">
+        <div class="header">
             <h1><a href="index.html">SOLOMON ROSENTHAL</a></h1>
         </div>
-        
-        <nav class = "navigation">
+
+        <nav class="navigation">
             <ul>
-                <li><a href="music.html" >MUSIC</a></li>
+                <li><a href="music.html">MUSIC</a></li>
                 <li><a href="artwork.html">ARTWORK</a></li>
                 <li><a href="software.html">SOFTWARE</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="cv.html"class = "mainPage">CV</a></li>
+                <li><a href="cv.html" class="mainPage">CV</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+<div class = "flexParentElement">
+        <p2 class="bodyText">
+            <div class ="bodyHeading"><b>SELECTED PERFORMANCES:</b></div>
+            4.6.24 Spiky World, Los Angeles, CA <br>
+            3.15.24 Renegade, Los Angeles, CA<br>
+            2.29.24 Arcana, San Diego, CA<br>
+            1.28.24 Secret Location, Los Angeles CA<br>
+            1.26.24 PSstudio, Los Angeles, CA<br>
+            1.25.24 No House, Los Angeles CA<br>
+            1.10.24 Silverlake Lounge, Los Angeles, CA<br>
+            1.3.24 Hart Bar, NYC, NY<br>
+            12.18.23 Living Gallery, NYC, NY<br>
+            12.4.23 Aeffect Radio<br>
+            11.30.23 Ursa Live<br>
+            11.18.23 Renegade, San Diego<br>
+            11.9.23 Church of Fun, LA<br>
+            11.6.23 Coaxial, LA<br>
+            11.4.23 Topanga Canyon, LA<br>
+            10.21.23 Samhain, California City<br>
+            10.8.23 Griffith Park, LA<br>
+            10.7.23 Secret Location, LA<br>
+            9.16.23 Griffith Park, LA<br>
+            9.9.23 The Newton, Los Angeles<br>
+            9.7.23 Obriens, Boston<br>
+            9.5.23 Hart Bar, Brooklyn<br>
+            8.13.23 The Department, Marlboro MA<br>
+            7.21.23 Trendy Shit Town, Boston<br>
+            7.11.23 Living Gallery, Brooklyn<br>
+            7.8.23 Newtown Radio<br>
+            7.6.23 Heaven Can Wait, NYC<br>
+            7.2.23 Living Gallery, Brooklyn<br>
+            5.26.23 Renegade, LA<br>
+            5.6.23 Renegade, LA<br>
+            5.5.23 Broad Art Center, LA<br>
+            4.27.23 Kchung Radio, LA<br>
+            4.20.23 Massive, LA<br>
+            4.18.23 Arboresence, LA<br>
+            3.10.23 The Smell, LA<br>
+            2.10.23 The Smell, LA<br>
+            2.4.23 Non Plus Ultra, LA<br>
+            1.20.23 The Smell, LA<br>
+            1.11.23 🐍🕳(ep release), LA<br>
+            1.7.23 The Firehouse, Worcester<br>
+            1.6.23 The Lilypad Inman, Boston<br>
+            1.5.23 NEB collective, New Haven<br>
+            1.4.23 News Cafe, PVD<br>
+            1.3.23 Purgatory BK, NYC<br>
+            12.10.22 Oracle Tavern, LA<br>
+            12.6.22 Genghis Cohen, LA<br>
+            11.12.22 :･ﾟ🐍🕳, LA<br>
+            11.12.22 fall festival, LA<br>
+            10.16.22 Silverlake Lounge, LA<br>
+            10.9.22 Woodley Park w/Palacio Palace, LA<br>
+            7.9.22 - Star Market Bathroom, Boston<br>
+            7.2.22 - Acud Macht Neu, Berlin<br>
+            4.22.22 - No House, LA<br>
+            2.19.22 - Ren Rave, California City<br>
+            2.5.22 - No House, LA<br>
+
+        </p2>
+        <p2 class = "bodyTextRight">
+            <div class ="bodyHeading"><b>SELECTED EXHIBITIONS:</b></div>
+            4.13.24 - 4.20.24 Material Emmision, Stevenson-Blanche Gallery<br>
+            4.13.23 - 4.20.23 Rituals Machines Bodies, Stevenson-Blanche Gallery<br>
+            
+
+        </p2 class = "PRESS">
+        <div class ="bodyHeading"><b>PRESS:</b></div>
+        <p2>
+
+        </p2>
+
+        <div>
     </main>
+
+
 
     <div id="background">
 
         <script>
             // Define variables
             let scene, camera, renderer, cube;
-        
+
             // Initialize Three.js scene
             function init() {
                 scene = new THREE.Scene();
                 scene.background = new THREE.Color(0xffffff);
                 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        
+
                 renderer = new THREE.WebGLRenderer();
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 document.getElementById('background').appendChild(renderer.domElement);
-        
+
                 const geometry = new THREE.SphereGeometry();
                 const material = new THREE.MeshBasicMaterial({ color: 0xf3f3f3 });
                 cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
-                cube.scale.set(2,2,0.1);
+                cube.scale.set(2, 2, 0.1);
 
                 camera.position.z = 5;
             }
-        
+
             // Animate the cube
             function animate() {
                 requestAnimationFrame(animate);
@@ -59,11 +136,11 @@
                 cube.rotation.y += 0.01;
                 renderer.render(scene, camera);
             }
-        
+
             // Call the functions
             init();
             animate();
-        
+
             // // Resize handling
             // window.addEventListener('resize', () => {
             //     camera.aspect = window.innerWidth / window.innerHeight;
@@ -76,12 +153,13 @@
 
             // // Apply the scale factor to the cube
             // cube.scale.set(scaleFactor, scaleFactor, scaleFactor);
-                // });
+            // });
         </script>
     </div>
 
     <footer>
-        <p>&copy; 2024 Artist Portfolio</p>
+        <p>&copy; Solomon Rosenthal</p>
     </footer>
 </body>
+
 </html>

@@ -20,6 +20,45 @@
 
 .header a {
     text-decoration: none;
+    margin-top: 0px;
+    
+}
+
+.bodyText{
+    font: Helvetica;
+    display: flex;
+    flex-direction: column;
+    margin-right:200px;
+    margin-left: 40px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size:14px;
+}
+
+.bodyHeading{
+    font-size:20px;
+    line-height: 30px;
+}
+
+.bodyTextRight{
+    flex: 2;
+    font: Helvetica;
+    flex-direction: column;
+    margin-right:200px;
+    margin-left: 40px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size:14px;
+
+}
+
+.flexParentElement{
+    display: flex;
+    width: 100%;
+}
+
+.Press{
+    flex: 3;
 }
 
 
@@ -40,6 +79,7 @@
     font-weight: bold;
     margin-right: 0px;
     font-size: 29px;
+    margin-top: 0px;
 }
 
 .mainPage {
@@ -47,15 +87,16 @@
 }
 nav {
     padding-left: 0px;
+    margin-left: 0px;
 }
 
 nav ul li {
 
     display: flex; /* Display the list items inline */
     flex-direction: row;
-    margin-right: 100px; /* Add some spacing between the list items */
+    margin-right: 0px; /* Add some spacing between the list items */
     text-decoration: none; /* Remove underline */
-    padding-left: 0;
+    padding-left: 0px;
     font-size: 29px;
 
 }
@@ -107,6 +148,7 @@ footer {
     color: black;
     text-align: left;
     padding: 10px 0;
+    margin-bottom: 0px;
 } 
 
 #background {
