@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MUSIC</h1>
+        <nav>
+            <ul>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="artwork.html">Artwork</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <p>This is a minimalistic portfolio showcasing the work of the artist/musician.</p>
+    </main>
+
+    <div id="background">
+
+        <script>
+            // Define variables
+            let scene, camera, renderer, cube;
+        
+            // Initialize Three.js scene
+            function init() {
+                scene = new THREE.Scene();
+                scene.background = new THREE.Color(0xffffff);
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        
+                renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                document.getElementById('background').appendChild(renderer.domElement);
+        
+                const geometry = new THREE.PlaneGeometry();
+                const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
+                cube = new THREE.Mesh(geometry, material);
+                scene.add(cube);
+                cube.scale.set(3,3,3);
+
+                camera.position.z = 5;
+            }
+        
+            // Animate the cube
+            function animate() {
+                requestAnimationFrame(animate);
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                renderer.render(scene, camera);
+            }
+        
+            // Call the functions
+            init();
+            animate();
+        
+            // // Resize handling
+            // window.addEventListener('resize', () => {
+            //     camera.aspect = window.innerWidth / window.innerHeight;
+            //     camera.updateProjectionMatrix();
+            //     renderer.setSize(window.innerWidth, window.innerHeight);
+
+            // window.addEventListener('scroll', () => {
+            // // Calculate the scale factor based on scroll position
+            // const scaleFactor = 1 + window.scrollY * 0.01; // Adjust this factor as needed
+
+            // // Apply the scale factor to the cube
+            // cube.scale.set(scaleFactor, scaleFactor, scaleFactor);
+                // });
+        </script>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Artist Portfolio</p>
+    </footer>
+</body>
+</html>
