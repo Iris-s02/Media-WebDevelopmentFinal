@@ -15,11 +15,11 @@
         
         <nav class = "navigation">
             <ul>
-                <li><a href="music.html" class = "mainPage">MUSIC</a></li>
+                <li><a href="music.html" >MUSIC</a></li>
                 <li><a href="artwork.html">ARTWORK</a></li>
                 <li><a href="software.html">SOFTWARE</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="cv.html"class = "mainPage">CV</a></li>
             </ul>
         </nav>
     </header>
@@ -43,11 +43,11 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 document.getElementById('background').appendChild(renderer.domElement);
         
-                const geometry = new THREE.CylinderGeometry();
+                const geometry = new THREE.SphereGeometry();
                 const material = new THREE.MeshBasicMaterial({ color: 0xf3f3f3 });
                 cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
-                cube.scale.set(2,3,2);
+                cube.scale.set(2,2,0.1);
 
                 camera.position.z = 5;
             }

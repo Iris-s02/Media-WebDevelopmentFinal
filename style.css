@@ -1,8 +1,8 @@
 *{
     font-family: Helvetica, sans-serif;
-    /* border:0px; */
-    /* display: flex;
-    flex-direction: column; */
+    border:0px;
+    /* display: flex; */
+    /* //flex-direction: row; */
     /*background-image: linear-gradient(to right, black, white);*/
     
 }
@@ -18,10 +18,19 @@
     color: black;
 }
 
-.header:hover{
-    color: lightslategrey; 
+.header a {
+    text-decoration: none;
 }
 
+
+
+/* .header:hover{
+    color: lightslategrey; 
+} */
+
+.header a:visited{
+    color: black;
+}
 .navigation {
     font: Helvetica;
     Color: black;
@@ -30,7 +39,7 @@
     display: inline;
     font-weight: bold;
     margin-right: 0px;
-    font-size: 18px;
+    font-size: 29px;
 }
 
 .mainPage {
@@ -41,19 +50,23 @@ nav {
 }
 
 nav ul li {
-    display: inline; /* Display the list items inline */
+
+    display: flex; /* Display the list items inline */
+    flex-direction: row;
     margin-right: 100px; /* Add some spacing between the list items */
     text-decoration: none; /* Remove underline */
     padding-left: 0;
+    font-size: 29px;
 
 }
 nav ul li a {
     color: black; /* Set the color of the links */
     text-decoration: none; /* Remove underline */
+    flex-direction: row;
 }
 
 nav ul li a:hover {
-    color: gray; /* Change color on hover */
+    color: #e7e7e7; /* Change color on hover */
 }
 
 body {

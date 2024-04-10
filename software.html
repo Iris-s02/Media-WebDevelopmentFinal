@@ -9,14 +9,17 @@
 </head>
 <body>
     <header>
-        <h1>Software</h1>
-        <nav>
+        <div class = "header">
+            <h1><a href="index.html">SOLOMON ROSENTHAL</a></h1>
+        </div>
+        
+        <nav class = "navigation">
             <ul>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="artwork.html">Artwork</a></li>
-                <li><a href="software.html">Software</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="cv.html">About</a></li>
+                <li><a href="music.html">MUSIC</a></li>
+                <li><a href="artwork.html"  >ARTWORK</a></li>
+                <li><a href="software.html" class = "mainPage">SOFTWARE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
@@ -43,10 +46,10 @@
                 document.getElementById('background').appendChild(renderer.domElement);
         
                 const geometry = new THREE.SphereGeometry();
-                const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
+                const material = new THREE.MeshBasicMaterial({ color: 0xf3f3f3 });
                 cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
-                cube.scale.set(3,3,3);
+                cube.scale.set(2,2,2);
 
                 camera.position.z = 5;
             }

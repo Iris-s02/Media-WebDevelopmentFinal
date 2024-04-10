@@ -46,7 +46,7 @@
                 document.getElementById('background').appendChild(renderer.domElement);
         
                 const geometry = new THREE.PlaneGeometry();
-                const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
+                const material = new THREE.MeshBasicMaterial({ color: 0xf3f3f3 });
                 cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
                 cube.scale.set(3,3,3);
