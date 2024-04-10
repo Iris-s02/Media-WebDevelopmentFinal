@@ -59,6 +59,7 @@
 
 .Press{
     flex: 3;
+    justify-content: left;
 }
 
 
