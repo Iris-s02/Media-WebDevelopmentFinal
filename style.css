@@ -14,6 +14,8 @@
     font: Helvetica;
     font-size: 30px;
     margin-top: 0px;
+    text-decoration: none;
+    color: black;
 }
 
 .header:hover{
@@ -31,6 +33,9 @@
     font-size: 18px;
 }
 
+.mainPage {
+    text-decoration: underline;
+}
 nav {
     padding-left: 0px;
 }
