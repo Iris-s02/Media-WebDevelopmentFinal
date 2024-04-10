@@ -134,22 +134,53 @@
             <br>
             <br>
 
-            <b>Iris Ipsum— Founder </b> 
+            <b>Iris Ipsum— Founder </b>
             January 2020 - Present <br>
-            Freelance audio programming and electrical engineering for audio software and hardware, with over 6,000 sales worldwide.
+            Freelance audio programming and electrical engineering for audio software and hardware, with over 6,000
+            sales worldwide.
 
             <br>
             <br>
 
             <b>Maryann Thompson Architects — Design Assistant</b>
             January 2019 - September 2021<br>
-            Aided in design for various architectural projects such as the Brighton Community Pool and Olin College of Engineering Presidents Housing  
+            Aided in design for various architectural projects such as the Brighton Community Pool and Olin College of
+            Engineering Presidents Housing
 
             <br>
             <br>
             <div class="bodyHeading"><b>EDUCATION:</b></div>
+            <br>
             <b>California Institute of the Arts, Valencia CA </b>
+            2021-2025 <br>
             Music Technology, Interaction, Intelligence and Design + Fine Art Double Major BFA
+            <br>
+            <br>
+            <div class="bodyHeading"><b>SKILLS:</b></div>
+            <br>
+            <ul style="list-style-type:georgian" style ="padding-left:0px">
+                <li>Music Production, Mixing and Mastering</li><br>
+                <li>Audio Software Development with Max-MSP and C++ JUCE</li><br>
+                <li>Web Development with HTML, CSS, and Java Script</li><br>
+                <li>Graphic Design and Media Development</li><br>
+                <li>Embedded Electronics Engineering</li> <br>
+                <li>Architectural Design</li> <br>
+                <li>Digital Fabrication</li> <br>
+                <li>Construction</li> <br>
+                <li>MIG Welding</li> <br>
+                <li>Computer Aided Design (CAD)</li>
+            </ul>
+            <br>
+            <br>
+            <div class="bodyHeading"><b>RESIDENCIES:</b></div>
+            <br>
+            June 2023 - Environmental Listening at Camp FR
+
+
+
+
+
+
 
 
 
@@ -179,11 +210,11 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 document.getElementById('background').appendChild(renderer.domElement);
 
-                const geometry = new THREE.SphereGeometry();
+                const geometry = new THREE.BoxGeometry();
                 const material = new THREE.MeshBasicMaterial({ color: 0xf3f3f3 });
                 cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
-                cube.scale.set(2, 2, 0.1);
+                cube.scale.set(5, 3, 2);
 
                 camera.position.z = 5;
             }
