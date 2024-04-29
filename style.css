@@ -14,6 +14,7 @@
     font: Helvetica;
     font-size: 30px;
     margin-top: 0px;
+    margin-left: 10px;
     text-decoration: none;
     color: black;
 }
@@ -22,6 +23,11 @@
     text-decoration: none;
     margin-top: 0px;
     
+}
+
+.header:hover {
+    transform: scale(1.001);
+    color: #e7e7e7;
 }
 
 .bodyText{
@@ -81,6 +87,8 @@
     margin-right: 0px;
     font-size: 29px;
     margin-top: 0px;
+    display: flex;
+    flex-direction: row;
 }
 
 .mainPage {
@@ -94,7 +102,7 @@ nav {
 nav ul li {
 
     display: flex; /* Display the list items inline */
-    flex-direction: row;
+    flex-direction: column;
     margin-right: 0px; /* Add some spacing between the list items */
     text-decoration: none; /* Remove underline */
     padding-left: 0px;
@@ -104,11 +112,14 @@ nav ul li {
 nav ul li a {
     color: black; /* Set the color of the links */
     text-decoration: none; /* Remove underline */
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row-reverse; */
+
 }
 
 nav ul li a:hover {
     color: #e7e7e7; /* Change color on hover */
+    transform: scale(1.01);
 }
 
 body {
@@ -160,4 +171,33 @@ footer {
     height: 100%;
     z-index: -1;
     color:#fff;
+}
+
+.gallery {
+    margin: 10px 50px;
+}
+
+.gallery img {
+    transition: 1s;
+    padding: 15px;
+    width:200px;
+}
+
+.galley img:hover {
+    filter: greyscale(50%);
+    transform: scale(1.1);
+}
+
+#musicLogos {
+    display: flex;
+    width: 50px;
+    flex-direction: row-reverse;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
+}
+
+#musicItem {
+    width: 50px;
+    margin: 0 5px;
 }
