@@ -8,15 +8,26 @@
 }
 
 
-
+.container {
+    display: flex;
+    justify-content: row;
+    /* align-items:center; */
+  }
 
 .header {
     font: Helvetica;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: left;
     font-size: 30px;
     margin-top: 0px;
     margin-left: 10px;
     text-decoration: none;
     color: black;
+    margin-bottom: 0px;
+    /* width: 700px; */
+    /* line-height: 45px; */
 }
 
 .header a {
@@ -26,7 +37,7 @@
 }
 
 .header:hover {
-    transform: scale(1.001);
+    transform: scale(1.01);
     color: #e7e7e7;
 }
 
@@ -81,45 +92,68 @@
     font: Helvetica;
     Color: black;
     /* display: flex; */
-    justify-content:left;
-    display: inline;
+    /* justify-content:right; */
+    padding-right: 10px;
+    /* display: inline; */
     font-weight: bold;
     margin-right: 0px;
     font-size: 29px;
+    margin-left: 500px;
     margin-top: 0px;
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: column; */
+    text-decoration: none;
+    
 }
 
 .mainPage {
     text-decoration: underline;
 }
 nav {
-    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding-left: 10px;
     margin-left: 0px;
+    text-decoration: none;
 }
 
-nav ul li {
-
-    display: flex; /* Display the list items inline */
-    flex-direction: column;
+nav a {
+    color: black;
+    display: inline-flex; 
+    /* flex-direction: row-reverse; */
+    /* justify-content: left; */
+    /* flex-direction: row; */
     margin-right: 0px; /* Add some spacing between the list items */
     text-decoration: none; /* Remove underline */
-    padding-left: 0px;
+    padding-left: 10px;
     font-size: 29px;
-
+    flex-wrap: wrap;
+    flex-grow: grow;
+    list-style: none;
 }
-nav ul li a {
+
+nav li {
+    font: Helvetica;
+    font-weight: bold;
     color: black; /* Set the color of the links */
     text-decoration: none; /* Remove underline */
+    padding: 4px;
+	margin: 2px;
+	/* justify-content: center; */
+	flex-grow: 1;
     /* display: flex;
     flex-direction: row-reverse; */
 
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #e7e7e7; /* Change color on hover */
-    transform: scale(1.01);
+    transform: scale(1.1);
+}
+
+nav li a:visited {
+    color: black;
 }
 
 body {
@@ -188,16 +222,27 @@ footer {
     transform: scale(1.1);
 }
 
-#musicLogos {
+.musicLogos {
     display: flex;
-    width: 50px;
-    flex-direction: row-reverse;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: row;
+    width: 10px;
+    gap: 100px;
+    flex-wrap:wrap-reverse;
+    justify-content: center;
     /* flex-direction: row-reverse; */
 }
 
-#musicItem {
-    width: 50px;
-    margin: 0 5px;
+.musicItem {
+    /* display: flex;
+    flex-direction: column;
+    display: inline-flex; */
+}
+
+
+.gumroad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
 }

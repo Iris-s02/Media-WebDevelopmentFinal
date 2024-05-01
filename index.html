@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
         <div class = "header">
-            <h1 >SOLOMON ROSENTHAL</h1>
+            <h1>SOLOMON ROSENTHAL</h1>
         </div>
-        
         <nav class = "navigation">
             <ul>
-                <li><a href="music.html">MUSIC</a></li>
-                <li><a href="artwork.html">ARTWORK</a></li>
-                <li><a href="software.html">SOFTWARE</a></li>
-                <li><a href="hardware.html">HARDWARE</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <a href="music.html"><li>MUSIC</li></a>
+                <a href="artwork.html"><li>ARTWORK</li></a>
+                <a href="software.html"><li>SOFTWARE</li></a>
+                <a href="hardware.html"><li>HARDWARE</li></a>
+                <a href="about.html"><li>ABOUT</li></a>
+                <a href="cv.html"><li>CV</li></a>
             </ul>
         </nav>
     </header>
@@ -50,7 +50,7 @@
                 const material = new THREE.MeshBasicMaterial({ color: 0x00000 });
                 cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
-                cube.scale.set(3,3,3);
+                cube.scale.set(2,2,2);
 
                 camera.position.z = 5;
             }
